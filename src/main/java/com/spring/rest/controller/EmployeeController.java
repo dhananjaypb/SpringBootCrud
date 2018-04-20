@@ -47,12 +47,14 @@ public class EmployeeController {
 		return es.deleteEmployee(id);
 	}
 	
-	@PutMapping("/update")
+//	@PutMapping("/update")
+	@RequestMapping(value = "/update", method = RequestMethod.PUT, consumes="application/json" )
 	public boolean updateEmployee(@RequestBody Employee e){
 		return es.updateEmployee(e);
 	}
 	
-	@PostMapping("/add")
+//	@PostMapping("/add")
+	@RequestMapping(value = "/hi", method = RequestMethod.POST, consumes="application/json" )
 	public Employee addEmployee(@RequestBody Employee e){
 		System.out.println(e);
 		es.addEmployee(e);
