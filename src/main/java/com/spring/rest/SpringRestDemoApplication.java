@@ -12,6 +12,8 @@ public class SpringRestDemoApplication {
 	public HibernateJpaSessionFactoryBean sessionFactory() {
 	    return new HibernateJpaSessionFactoryBean();
 	}
+	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringRestDemoApplication.class, args);
 	}
